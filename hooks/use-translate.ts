@@ -1,9 +1,12 @@
+'use client'
+
+import { useTranslation } from '@/i18n/client'
 import { useParams } from 'next/navigation'
-import { useTranslation } from 'react-i18next'
 
 function useTranslate() {
-	const { lng } = useParams()
-	const { t } = useTranslation(lng as string)
+	const params = useParams()
+	const lng = Array.isArray(params.lng) ? params.lng[0] : params.lng
+	const { t } = useTranslation(lng || 'en')
 
 	return t
 }
