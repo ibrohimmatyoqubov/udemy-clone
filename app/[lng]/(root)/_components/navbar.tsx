@@ -17,7 +17,7 @@ function Navbar() {
 	const t = useTranslate()
 
 	return (
-		<div className='fixed inset-0 z-40 h-20 bg-background/70 backdrop-blur-xl'>
+		<div className='fixed inset-0 z-40 h-20 bg-background/70 backdrop-blur-xl max-md:px-5'>
 			<div className='container mx-auto flex h-full max-w-7xl items-center justify-between border-b'>
 				<div className='flex items-center gap-4'>
 					<Logo />
