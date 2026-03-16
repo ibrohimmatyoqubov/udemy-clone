@@ -11,12 +11,12 @@ async function Page({ params: { lng } }: LngParams) {
 		<>
 			<TopBar label='contacts' />
 			<iframe
-				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48270.10003537673!2d60.581874040592886!3d41.55237379724618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc9284eafb523%3A0xffaf4382f65d7b61!2sUrgench%2C%20Xorazm%20Region%2C%20Uzbekistan!5e1!3m2!1sen!2s!4v1773254822413!5m2!1sen!2s'
+				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87518.32020957548!2d4.687095897265622!3d52.35763599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609b5756c7157%3A0x3e2ad0982f3fcdff!2sBlue%20Road%20Academy!5e1!3m2!1sen!2s!4v1773578821107!5m2!1sen!2s'
 				loading='lazy'
 				className='h-96 w-full'
 			/>
 
-			<div className='container mx-auto max-w-6xl max-md:px-5'>
+			<div className='container mx-auto max-w-6xl'>
 				<div className='mt-6 grid grid-cols-2 gap-4 max-md:grid-cols-1'>
 					<div className='flex flex-col'>
 						<h1 className='font-space-grotesk text-4xl font-bold'>
@@ -28,11 +28,12 @@ async function Page({ params: { lng } }: LngParams) {
 
 						<div className='mt-12 flex items-center gap-3'>
 							<Mail className='size-4' />
-							<p className='text-sm'>info@udemy.com</p>
+							<p className='text-sm'>info@demmy.com</p>
 						</div>
 						<div className='mt-2 flex items-center gap-3'>
 							<Phone className='size-4' />
-							<p className='text-sm'>+998 (90) 000-00-00</p>
+							<p className='text-sm'>+998 (90) 000-00-00</p> |
+							<p className='text-sm'>+31 220 777 777</p>
 						</div>
 					</div>
 
