@@ -14,7 +14,7 @@ import useTranslate from '@/hooks/use-translate'
 function AllCourses() {
 	const t = useTranslate()
 	return (
-		<div className='container mx-auto mt-12 max-w-6xl max-md:px-5'>
+		<div className='container mx-auto mt-12 max-w-6xl'>
 			<div className='flex items-center justify-between max-md:flex-col max-md:items-start max-md:space-y-2'>
 				<h2 className='max-md:mb-2 max-md:self-end'>
 					{t('result1')}{' '}
