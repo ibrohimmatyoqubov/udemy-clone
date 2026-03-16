@@ -21,11 +21,11 @@ function Navbar() {
 	const { lng } = useParams()
 
 	return (
-		<div className='fixed inset-0 z-40 h-20 bg-background/70 backdrop-blur-xl max-md:px-5'>
+		<div className='fixed inset-0 z-40 h-20 bg-background/70 backdrop-blur-xl'>
 			<div className='container mx-auto flex h-full max-w-7xl items-center justify-between border-b'>
-				<div className='flex items-center gap-4'>
+				<div className='flex shrink-0 items-center gap-4'>
 					<Logo />
-					<div className='hidden items-center gap-3 border-l pl-2 md:flex'>
+					<div className='hidden items-center gap-3 border-l pl-2 tb:flex'>
 						{navLinks.map(nav => (
 							<Link
 								href={`/${nav.route}`}
@@ -43,14 +43,16 @@ function Navbar() {
 
 				<div className='flex items-center gap-2'>
 					<div className='flex items-center gap-2 md:border-r md:pr-3'>
-						<div className='hidden md:flex'>
+						<div className='hidden tb:flex'>
 							<GlobalSearch />
-							<LanguageDropdown />
 							<Button size={'icon'} variant={'ghost'}>
 								<ShoppingCart />
 							</Button>
 						</div>
 						<Mobile />
+						<div className='hidden sm:flex'>
+							<LanguageDropdown />
+						</div>
 						<ModeToggle />
 					</div>
 					<SignedIn>

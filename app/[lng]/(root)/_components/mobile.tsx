@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import {
 	Sheet,
+	SheetClose,
 	SheetContent,
 	SheetHeader,
 	SheetTrigger,
@@ -21,7 +22,7 @@ function Mobile() {
 	const t = useTranslate()
 	return (
 		<Sheet>
-			<SheetTrigger asChild className='md:hidden'>
+			<SheetTrigger asChild className='tb:hidden'>
 				<Button size={'icon'} variant={'ghost'}>
 					<AlignCenter />
 				</Button>
@@ -33,14 +34,15 @@ function Mobile() {
 				</SheetHeader>
 				<div className='mt-4 flex flex-col space-y-3'>
 					{navLinks.map(nav => (
-						<Link
-							href={`/${nav.route}`}
-							key={nav.route}
-							className='flex h-12 cursor-pointer items-center gap-2 rounded-sm px-3 transition-colors hover:bg-blue-400/20'
-						>
-							<nav.icon className='size-5' />
-							<span>{t(nav.name)}</span>
-						</Link>
+						<SheetClose asChild key={nav.route}>
+							<Link
+								href={`/${nav.route}`}
+								className='flex h-12 cursor-pointer items-center gap-2 rounded-sm px-3 transition-colors hover:bg-blue-400/20'
+							>
+								<nav.icon className='size-5' />
+								<span>{t(nav.name)}</span>
+							</Link>
+						</SheetClose>
 					))}
 					<LanguageDropdown isMobile />
 					<div className='flex items-center justify-center gap-4'>
