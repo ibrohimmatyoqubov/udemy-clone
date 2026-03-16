@@ -18,7 +18,7 @@ function Hero() {
 		<>
 			<div className='container mx-auto grid min-h-[80vh] max-w-6xl grid-cols-2 gap-8 max-md:grid-cols-1 max-md:pt-32'>
 				<div className='flex flex-col space-y-4 self-center'>
-					<h1 className='font-space-grotesk text-5xl font-bold'>
+					<h1 className='font-space-grotesk text-3xl font-bold md:text-4xl tb:text-5xl'>
 						{t('heroTitle')}{' '}
 						<span className='text-blue-500'>{t('heroTitleSpan')}</span>
 					</h1>
@@ -29,7 +29,7 @@ function Hero() {
 								{t('findCourses')}
 							</Button>
 						</Link>
-						<Link href={'/courses'}>
+						<Link href={'/blogs'}>
 							<Button size={'lg'} rounded={'full'}>
 								{t('blogs')}
 							</Button>
